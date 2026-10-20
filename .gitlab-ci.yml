@@ -50,7 +50,7 @@ before_script:
       echo "AWS_SECRET_ACCESS_KEY is set to: ${AWS_SECRET_ACCESS_KEY:0:5}..."
     fi
     
-    # Debug: Print AWS-related environment variables
+    # Debug: Print AWS-related environment variables in terminal
     env | grep AWS
 
 stages:

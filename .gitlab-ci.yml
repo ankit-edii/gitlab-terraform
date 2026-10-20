@@ -35,7 +35,7 @@ before_script:
     export AWS_SECRET_ACCESS_KEY=$(echo $SECRETS | jq -r '.secrets[] | select(.name == "AWS_SECRET_ACCESS_KEY") | .version.value')
     
     # Debug: Print the structure of the secrets (without revealing values)
-    echo "Secrets structure:"
+    echo "Secrets structure print:"
     echo $SECRETS | jq 'del(.secrets[].version.value)'
     
     # Verify AWS credentials are set
